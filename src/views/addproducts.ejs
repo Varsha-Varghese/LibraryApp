@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Add book</title>
+<title>Add product</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keywords" content="Slide Login Form template Responsive, Login form web template, Flat Pricing tables, Flat Drop downs Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 </script>
-<link href="css/addbookstyle.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/addproductstyle.css" rel="stylesheet" type="text/css" media="all" />
 <link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
 <!-- //web font -->
 </head>
@@ -16,37 +16,31 @@
 <!-- main -->
 <div class="w3layouts-main"> 
 	<div class="bg-layer">
-		<h1>Add Book</h1>
+		<h1>Add Product</h1>
 		<!---728x90--->
-
-		<div class="header-main">
-			
+		<div class="header-main">			
 			<div class="header-left-bottom">
-				<form id="addbook" action="/addbooks/addbook" method="get">
+				<form id="addproduct" action="/addproducts/addproduct" method="post" enctype="multipart/form-data">
 					<div class="icon1">
-            <input type="text" name="title" placeholder="Title" autofocus required required=""/>
+            <input type="text" name="name" placeholder="Name" autofocus required required=""/>
 					</div>
 					<div class="icon1">
-            <input type="text" name="author" class="form-control" placeholder="Author"  required=""/>
+            <input type="text" name="quality" class="form-control" placeholder="quality"  required=""/>
 					</div>
 					<div class="icon1">
-            <input type="text" name="genre" class="form-control" placeholder="Genre"  required=""/>
-					</div>
-				
+            <input type="text" name="quantity" class="form-control" placeholder="quantity"  required=""/>
+					</div>				
 					<div class="icon1">
             <label>Image:</label>
             <input type="file" accept="image/*" name="image" class="form-control" placeholder="Image" required=""/>
 					</div>
 					<div class="bottom">
 						<button type="submit" class="btn">ADD</button>
-					</div>
-					
+					</div>					
 					<div class="clear"></div>
 				</form>	
-			</div>
-			
-		</div>
-		
+			</div>			
+		</div>		
 	</div>
 </div>	
 </body>

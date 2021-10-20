@@ -12,23 +12,21 @@
 <!-- main -->
 <div class="w3layouts-main"> 
 	<div class="bg-layer">
-		<h1>Login</h1>
+		<h1>Log In</h1>
 		<!---728x90--->
-
-		<div class="header-main">
-			
+		<div class="header-main">			
 			<div class="header-left-bottom">
-				<form name="loginpage" action="/" onsubmit="return loginvalidate();">
-					<div class="icon1">
-						
-						<input id = "uname" type="text" placeholder="User name" required=""/>
+				<form name="loginpage" action="/login/checkdata" method="get">
+					<label id="error" hidden=true></label>
+					<div class="icon1">						
+						<input id = "uname" name="uname" type="text" placeholder="Email ID / User name" required=""/>
 					</div>
 					<div class="icon1">
 						
-						<input id="pwd" type="password" placeholder="Password" required=""/>
+						<input id="pwd" name="pwd" type="password" placeholder="Password" required=""/>
 					</div>
 					<div class="bottom">
-						<button class="btn">Log In</button>
+						<button class="btn">Log In </button>
 					</div>
 					<div class="links">
 						
@@ -36,13 +34,12 @@
 						<div class="clear"></div>
 					</div>
 				</form>	
-			</div>
-			
-		</div>
-		
+			</div>			
+		</div>		
 	</div>
 </div>	
+
 <!-- //main -->
-<script src="js/login.js"></script>
+<!-- <script src="../routes/loginroutes.js"></script> -->
 </body>
 </html>

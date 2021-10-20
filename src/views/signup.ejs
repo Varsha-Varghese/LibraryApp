@@ -18,24 +18,22 @@
 	<div class="bg-layer">
 		<h1>Sign Up</h1>
 		<!---728x90--->
-
-		<div class="header-main">
-			
+		<div class="header-main">			
 			<div class="header-left-bottom">
-				<form name="signupform" action="/">
+				<form name="signupform" action="/signup/adddata" method="post">
 					<div class="icon1">
-						<input type="text" placeholder="name" required=""/>
+						<input type="text" name="name" placeholder="name" required=""/>
 					</div>
 					<div class="icon1">
-						<input id="mob" type="tel" placeholder="Mobile No." onkeyup="return mobvalidate();" required=""/>
+						<input id="mob" type="tel" name="mobileNo" placeholder="Mobile No." onkeyup="return mobvalidate();" required=""/>
 					</div>
 					 <label id="l1" hidden=true></label>
 					<div class="icon1">
-						<input id="email" type="email" onkeyup="return emailvalidate();" placeholder="Email Address" required=""/>
+						<input id="email" type="email" name="email" onkeyup="return emailvalidate();" placeholder="Email Address" required=""/>
 					</div>
 					<label id="l2" hidden=true></label>
 					<div class="icon1">
-						<input id="pwd1" type="password" placeholder="Enter a Password" required=""/>
+						<input id="pwd1" type="password" name="password" placeholder="Enter a Password" required=""/>
 					</div>
                     <div class="icon1">
 						<input id="pwd2" type="password" onkeyup="return pwdvalidate();" placeholder="Confirm Password" required=""/>
@@ -50,10 +48,8 @@
 						<div class="clear"></div>
 					</div>
 				</form>	
-			</div>
-			
-		</div>
-		
+			</div>			
+		</div>		
 	</div>
 </div>	
 <!-- //main -->

@@ -1,3 +1,4 @@
+
 function mobvalidate(){
     var mob = signupform.mob.value;
     let mobno = /^\(?(\d{3})\)?[-\. ]?(\d{3})[-\. ]?(\d{4})$/;
@@ -30,8 +31,7 @@ function emailvalidate(){
         l2.innerHTML="Please enter a valid email id!";
         mail.focus();
         return false;
-      }
-      
+      }      
 }
 function pwdvalidate(){
   var pwd1 = signupform.pwd1.value;
