@@ -3,11 +3,10 @@ const mongoose = require("mongoose");
 mongoose.connect("mongodb+srv://userone:userone@fsdfiles.fneg2.mongodb.net/library?retryWrites=true&w=majority");
 
 const Schema = mongoose.Schema;
-const signupSchema = new Schema({
+const authorSchema = new Schema({
     name : String,
-    mobileNo : String,
-    email : String,
-    password : String
+    books : String,
+    image : String
 });
-var signupdata = mongoose.model("signupdata",signupSchema);
-module.exports = signupdata;
+var authordata = mongoose.model("authordata",authorSchema);
+module.exports = authordata;
