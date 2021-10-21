@@ -2,23 +2,29 @@ const express = require("express");
 const loginrouter = express.Router();
 const signupdata = require("../model/signupdata");
 const mongoose = require("mongoose");
-const alert = require("alert");
-mongoose.connect("mongodb+srv://userone:userone@fsdfiles.fneg2.mongodb.net/shoppingapp?retryWrites=true&w=majority");
+
+mongoose.connect("mongodb+srv://userone:userone@fsdfiles.fneg2.mongodb.net/library?retryWrites=true&w=majority");
 function router(nav){        
     loginrouter.get("/",function(req,res){
         res.render("login")       
     });
-    loginrouter.get("/checkdata",function(req,res){
-        const uname = req.query.uname;
-        const pwd = req.query.pwd;
+    loginrouter.post("/checkdata",function(req,res){
+        const uname = req.body.uname;
+        const pwd = req.body.pwd;
+       
         signupdata.findOne({email:uname, password:pwd}, function(err,user)
         {
-           if(err || !user)
+           if(uname=="admin" && pwd=="12345")
             {
-             alert("invalid user name/password");
+                res.redirect("/addbooks");
+               
+            }
+            else if(user)
+            {
+                res.redirect("/books");
             }
             else
-            res.redirect("/products");    
+           res.send("invalid");
         }
     )         
     });
