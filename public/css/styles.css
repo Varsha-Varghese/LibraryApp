@@ -9,9 +9,6 @@ body {
   padding-top:50px;
   color:#646464;
   background-color:#efefef;
-  background-repeat: no-repeat;
-  background-size: cover;
- 
 }
 
 h1,h2,h3,.highlight,.navbar a,#masthead h4 {
@@ -61,11 +58,6 @@ footer {
   position:fixed;
   top:0;
   width:100%;
-}
-
-.top-spacer {
-  background-color:#ffffff;
-  height:40px;
 }
 
 a,a:hover {
@@ -163,6 +155,22 @@ a,a:hover {
 .btn-twitter:hover {background-color:#3088FF;color:#62BBFF;}
 .btn-facebook:hover {background-color:#2A4998;color:#4C6BBA;}
 .btn-google-plus:hover {background-color:#C23836;color:#E45A58;}
+.w3layouts-main{
+  background-image: url('../images/bck.jpg');
+  background-repeat: no-repeat;
+ background-size: cover;
+-webkit-background-size:cover;
+-moz-background-size:cover; 
+  background-attachment: fixed;
+  position: relative;
+min-height: 100vh;
+}
+
+.bg-layer {
+  background: black;
+  mix-blend-mode:overlay;
+min-height: 100vh;
+}
 
 @media(max-width:667px){
 	
