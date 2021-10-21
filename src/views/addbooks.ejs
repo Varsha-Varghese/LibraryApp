@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add book</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Slide Login Form template Responsive, Login form web template, Flat Pricing tables, Flat Drop downs Sign up Web Templates, Flat Web Templates, Login sign up Responsive web template, SmartPhone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+</script>
+<link href="css/addbookstyle.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- //web font -->
+</head>
+<style>
+	h1 {
+	font-size: 45px;
+	color: #fff;
+	font-weight: 300;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	text-align: center;
+	padding: 1em 0 0.4em 0;
+	}	
+	.navbar-bright {
+	background-color:rgba(0, 0, 0, 0.7);
+	color:#fff;
+	margin-bottom: 0;
+	border-width: 0;
+	}
+
+	.navbar-bright a, .navbar-bright .navbar-brand, #masthead h4 {
+	color:#ccccdd;
+	font-size:14px;
+	text-transform: uppercase;
+	letter-spacing:.08em;
+	}
+
+	.navbar-bright li > a:hover {
+	background-color:white;
+	color: #000044;
+	}
+
+</style>
+<body>
+	<header class="navbar navbar-bright navbar-fixed-top" role="banner">
+		<div class="container">
+		  <div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+			  <span class="sr-only">Toggle navigation</span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			  <span class="icon-bar"></span>
+			</button>
+			<a href="/" class="navbar-brand">Home</a>
+		  </div>
+		  <nav class="collapse navbar-collapse" role="navigation">
+			<ul class="nav navbar-nav">
+			  <%for(i=0;i<nav.length;i++){%>
+			  <li>
+				<a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+			  </li>
+			  <%}%>
+			</ul>			
+		  </nav>
+		</div>
+	  </header>	  
+<div class="w3layouts-main"> 
+	<div class="bg-layer" style="padding-top: 0.01%;">
+		<h1>Add Book</h1>
+		<!---728x90--->
+		<div class="header-main">			
+			<div class="header-left-bottom">
+				<form id="addbook" action="/addbooks/addbook/books/book" method="post" enctype="multipart/form-data">
+					<div class="icon1">
+            <input type="text" name="title" placeholder="Title" autofocus required required=""/>
+					</div>
+					<div class="icon1">
+            <input type="text" name="author" class="form-control" placeholder="Author"  required=""/>
+					</div>
+					<div class="icon1">
+            <input type="text" name="genre" class="form-control" placeholder="Genre"  required=""/>
+					</div>				
+					<div class="icon1">
+            <label>Image:</label>
+            <input type="file" accept="image/*" name="image" class="form-control" placeholder="Image" required=""/>
+					</div>
+					<div class="bottom">
+						<button type="submit" class="btn">ADD</button>
+					</div>					
+					<div class="clear"></div>
+				</form>	
+			</div>			
+		</div>		
+	</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>	
+</body>
+</html>
