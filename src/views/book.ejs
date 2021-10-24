@@ -27,9 +27,9 @@
     </div>
     <nav class="collapse navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
-        <%for(i=0;i<nav.length;i++){%>
+        <%for(i=0;i<nav3.length;i++){%>
         <li>
-          <a href="<%=nav[i].link%>"><%=nav[i].name%></a>
+          <a href="<%=nav3[i].link%>"><%=nav3[i].name%></a>
         </li>
         <%}%>
       </ul>
@@ -71,8 +71,11 @@
                   <h4><span class="label label-default"><%=book.author%></span></h4><h4>
                   <small style="font-family:courier,'new courier';" class="text-muted"><%=book.genre%>  • </small>
                   </h4></div>
-                  <button hidden>UPDATE</button> <br> <br>
-                  <button hidden>DELETE</button>
+                 
+                  
+                  <a name="id" id="<%=book._id%>" class="btn btn-success" href="/updatebook/<%=book._id%>">UPDATE</a>
+                 <a  class="btn btn-danger" href="/deletebook/<%=book._id%>">DELETE</a>
+                  
                 <div class="col-xs-3"></div>
               </div>
               <br><br>
@@ -107,5 +110,7 @@
 	<!-- script references -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
+    <script src="../routes/addbookroutes.js"></script>
+ 
 	</body>
 </html>

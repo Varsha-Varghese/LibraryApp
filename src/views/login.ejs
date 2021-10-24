@@ -16,7 +16,7 @@
 		<!---728x90--->
 		<div class="header-main">			
 			<div class="header-left-bottom">
-				
+				<label class="error" style="color: red;" hidden>Invalid user name/password</label>
 				<form name="loginpage" action="/login/checkdata" method="post">
 					<div class="icon1">						
 						<input id = "uname" name="uname" type="text" placeholder="Email ID / User name" required=""/>
@@ -38,8 +38,21 @@
 		</div>		
 	</div>
 </div>	
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$("loginpage").submit((e)=>{
+		e.preventDefault()
+		$.ajax({
+			url:"/login/checkdata",
+			method:"post",
+			data:$("loginpage"),
+			
+		})
+	})
+</script>
 <!-- //main -->
-<script src="js/login.js"></script>
+<!-- <script src="js/login.js"></script> -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>	
 </body>
 </html>
