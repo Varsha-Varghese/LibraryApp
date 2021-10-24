@@ -12,22 +12,30 @@ function router(nav){
         const uname = req.body.uname;
         const pwd = req.body.pwd;
        
+           
         signupdata.findOne({email:uname, password:pwd}, function(err,user)
         {
+          
+           
            if(uname=="admin" && pwd=="12345")
             {
+                
                 res.redirect("/addbooks");
                
             }
             else if(user)
             {
+               
+                
                 res.redirect("/books");
             }
             else
-           res.send("invalid");
+           
+           res.send("Invalid user name/password");
         }
     )         
     });
+    
     return loginrouter;
 }
 module.exports = router;

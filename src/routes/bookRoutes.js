@@ -1,7 +1,8 @@
 const express = require("express");
 const booksrouter = express.Router();
 const Bookdata = require("../model/Bookdata");
-function router(nav){
+
+function router(nav3){
     // var books = [
     //     {
     //         title : "Tom and jerry",
@@ -28,23 +29,27 @@ function router(nav){
         .then(function(books){
             res.render("books",
             {
-                nav,
+                nav3,
                 books
             });
         })
        
     });
+   
     booksrouter.get("/:id",function(req,res){
         const id = req.params.id;
         Bookdata.findOne({_id:id})
         .then(function(book){
             res.render("book",{
-                nav,
+                nav3,
                 book
             })
         })
        
     });
+   
+    
+    
     return booksrouter;
 }
 
